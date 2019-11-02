@@ -5,6 +5,9 @@
   "description": "Routing Anything",
   "author": "nzws <git@nzws.me>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore \"**/*.js\" && prettier --check --ignore-path .gitignore \"**/*.js\"",
     "lint:md": "prettier --check --ignore-path .gitignore \"**/*.md\"",
