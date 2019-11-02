@@ -1,7 +1,33 @@
-# template-nodejs
+# @yuzulabo/any-router
 
-A project template for Node.js built in eslint, prettier and editorconfig.
+(C.S Spaces の副産物)
 
-# How to use
+> Routing Anything
 
-Click `Use this template`.
+```javascript
+import anyRouter from '@yuzulabo/any-router';
+
+const router = new anyRouter();
+
+router.use(async (state, next) => {
+  await next();
+  // final processing here... (ex: send)
+});
+
+router.use(async (state, next) => {
+  const start = Date.now();
+  await next();
+  const ms = Date.now() - start;
+  console.log(`${ms}ms`);
+});
+
+router.add('ping', (state, next) => {
+  state.ping = 'pong';
+  next();
+});
+
+const url = 'ping';
+router.route(url, {
+  globalState: 'something'
+});
+```
