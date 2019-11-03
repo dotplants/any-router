@@ -47,15 +47,7 @@ module.exports = class anyRouter {
 
     const notFoundControllers = [...(middleware || []), ...(notFound || [])];
 
-    if (Array.isArray(url)) {
-      const isFound = url[0] && url.every(value => routers[value]);
-      if (!isFound) {
-        return notFoundControllers;
-      }
-
-      const routes = url.map(value => routers[value]);
-      return [...(middleware || []), ...routes.flat()];
-    } else if (typeof url === 'string') {
+    if (typeof url === 'string') {
       if (!routers[url]) {
         return notFoundControllers;
       }
