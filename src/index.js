@@ -2,7 +2,6 @@ module.exports = class anyRouter {
   constructor() {
     this.routers = {};
     this.event = {};
-    this.resolver = [];
   }
 
   add(url, ...controllers) {
@@ -19,24 +18,21 @@ module.exports = class anyRouter {
 
   route(url, state = {}) {
     const runner = (controllers, key = 0) =>
-      new Promise(resolve => {
-        this.resolver.push(resolve);
+      new Promise((resolve, reject) => {
         const controller = controllers[key];
-
         if (!controller) {
-          return this.resolver.reverse().forEach(fn => fn());
+          return resolve();
         }
 
         try {
-          controller(state, (isEmit = false) =>
-            runner(controllers, isEmit ? 9999 : key + 1)
-          );
-        } catch (error) {
-          console.error(error);
+          return resolve(controller(state, () => runner(controllers, key + 1)));
+        } catch (err) {
+          console.error(err);
+          return reject(err);
         }
       });
 
-    runner(this._controllerSelector(url));
+    return runner(this._controllerSelector(url));
   }
 
   _controllerSelector(url) {

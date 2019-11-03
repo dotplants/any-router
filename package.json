@@ -1,6 +1,6 @@
 {
   "name": "@yuzulabo/any-router",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "src/index.js",
   "description": "Routing Anything",
   "author": "nzws <git@nzws.me>",
@@ -30,5 +30,6 @@
   "prettier": "@yuzulabo/prettier-config",
   "eslintConfig": {
     "extends": "@yuzulabo"
-  }
+  },
+  "dependencies": {}
 }
