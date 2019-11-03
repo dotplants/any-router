@@ -1,10 +1,12 @@
 {
   "name": "@yuzulabo/any-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "description": "Routing Anything",
   "author": "nzws <git@nzws.me>",
   "license": "MIT",
+  "repository": "https://github.com/nzws/any-router.git",
+  "homepage": "https://github.com/nzws/any-router",
   "publishConfig": {
     "access": "public"
   },
