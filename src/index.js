@@ -1,4 +1,4 @@
-export default class anyRouter {
+class anyRouter {
   constructor() {
     this.routers = {};
     this.event = {};
@@ -65,3 +65,5 @@ export default class anyRouter {
     return notFoundControllers;
   }
 }
+
+exports.default = anyRouter;
