@@ -1,6 +1,6 @@
 {
   "name": "@yuzulabo/any-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "src/index.js",
   "description": "Routing Anything",
   "author": "nzws <git@nzws.me>",

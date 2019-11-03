@@ -1,4 +1,4 @@
-class anyRouter {
+module.exports = class anyRouter {
   constructor() {
     this.routers = {};
     this.event = {};
@@ -64,6 +64,4 @@ class anyRouter {
 
     return notFoundControllers;
   }
-}
-
-exports.default = anyRouter;
+};
