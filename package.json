@@ -1,6 +1,6 @@
 {
   "name": "any-router",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "src/index.js",
   "description": "Routing Anything",
   "author": "dotPlants HQ <oss@dotplants.net>",
