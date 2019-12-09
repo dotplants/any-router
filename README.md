@@ -1,11 +1,9 @@
-# @yuzulabo/any-router
+![img](https://i.imgur.com/gWwIGeQ.png)
 
-(C.S Spaces の副産物)
-
-> Routing Anything
+# Example
 
 ```javascript
-import anyRouter from '@yuzulabo/any-router';
+import anyRouter from 'any-router';
 
 const router = new anyRouter();
 
@@ -31,3 +29,8 @@ router.route(url, {
   globalState: 'something'
 });
 ```
+
+# License
+
+- code: MIT
+- icon: Icon made by Smashicons from www.flaticon.com

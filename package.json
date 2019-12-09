@@ -1,12 +1,12 @@
 {
-  "name": "@yuzulabo/any-router",
-  "version": "1.0.5",
+  "name": "any-router",
+  "version": "1.1.0",
   "main": "src/index.js",
   "description": "Routing Anything",
-  "author": "nzws <git@nzws.me>",
+  "author": "dotPlants HQ <oss@dotplants.net>",
   "license": "MIT",
-  "repository": "https://github.com/nzws/any-router.git",
-  "homepage": "https://github.com/nzws/any-router",
+  "repository": "https://github.com/dotplants/any-router.git",
+  "homepage": "https://github.com/dotplants/any-router",
   "publishConfig": {
     "access": "public"
   },
