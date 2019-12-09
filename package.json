@@ -11,21 +11,19 @@
     "access": "public"
   },
   "scripts": {
-    "lint:js": "eslint --ignore-path .gitignore \"**/*.js\" && prettier --check --ignore-path .gitignore \"**/*.js\"",
-    "lint:md": "prettier --check --ignore-path .gitignore \"**/*.md\"",
-    "lint:json": "prettier --check --ignore-path .gitignore \"**/*.json\"",
+    "lint:js": "eslint --ignore-path .gitignore \"**/*.js\"",
+    "lint:prettier": "pretty-quick --check",
     "lint": "npm-run-all lint:* -s",
-    "format:js": "prettier --write --ignore-path .gitignore \"**/*.js\"",
-    "format:md": "prettier --write --ignore-path .gitignore \"**/*.md\"",
-    "format:json": "prettier --write --ignore-path .gitignore \"**/*.json\"",
+    "format:prettier": "pretty-quick",
     "format": "npm-run-all format:* -s"
   },
   "devDependencies": {
     "@yuzulabo/eslint-config": "~1",
     "@yuzulabo/prettier-config": "~1",
-    "eslint": "~6",
+    "eslint": "~6.7.2",
     "npm-run-all": "~4",
-    "prettier": "~1"
+    "prettier": "~1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "prettier": "@yuzulabo/prettier-config",
   "eslintConfig": {

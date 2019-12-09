@@ -17,20 +17,16 @@ module.exports = class anyRouter {
   }
 
   route(url, state = {}) {
-    const runner = (controllers, key = 0) =>
-      new Promise((resolve, reject) => {
-        const controller = controllers[key];
-        if (!controller) {
-          return resolve();
-        }
+    const runner = (controllers, key = 0) => {
+      const controller = controllers[key];
+      if (!controller) {
+        return Promise.resolve();
+      }
 
-        try {
-          return resolve(controller(state, () => runner(controllers, key + 1)));
-        } catch (err) {
-          console.error(err);
-          return reject(err);
-        }
-      });
+      return Promise.resolve(
+        controller(state, () => runner(controllers, key + 1))
+      );
+    };
 
     return runner(this._controllerSelector(url));
   }
